@@ -58,3 +58,11 @@ def over?(board)
     return false
   end
 end
+
+def winner(board)
+  if won?(board) != nil
+    board[won?(board).detect {|index| board[index] == "X" || board[index] == "O"}]
+  else
+    nil
+  end
+end
